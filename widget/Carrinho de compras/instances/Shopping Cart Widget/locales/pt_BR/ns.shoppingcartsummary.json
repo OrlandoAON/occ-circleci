@@ -1,0 +1,26 @@
+{
+  "resources": {
+    "buttonContinueShopping": "Continuar comprando",
+    "atTheRateText": "@",
+    "itemQuantity": "__productName__ Quantidade",
+    "totalTableSubTotal": "Subtotal:",
+    "placeHolderSelect": "Selecionar Brinde",
+    "totalTableSummary": "Totais do carrinho de compras.",
+    "cartHeader": "Seu carrinho de compras",
+    "itemHeaderItem": "Item",
+    "gwpItemNotAvailable": "O brinde da promoção não está disponível no momento.",
+    "buttonReconfigure": "Editar",
+    "changeButton": "Alterar",
+    "instockText": "Em estoque",
+    "itemHeaderItemTotal": "Total do item",
+    "includingTaxText": "(com imposto)",
+    "cartEmptyHeader": "O carrinho está vazio.",
+    "totalTableTotal": "Total:",
+    "outofstockText": "Esgotado",
+    "reconfigureText": "Reconfigurar",
+    "buttonRemoveItem": "Remover",
+    "itemHeaderItemPrice": "Preço",
+    "itemHeaderQuantity": "Quantidade",
+    "buttonUpdateQuantity": "Atualizar"
+  }
+}

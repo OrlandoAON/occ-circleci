@@ -1,0 +1,8 @@
+{
+  "configuration": {
+    "exampleOptionProperty": "option1",
+    "exampleBooleanProperty": true,
+    "exampleStringProperty": "Example String Property Value"
+  },
+  "displayName": "testecomnomeestranho"
+}

@@ -1,0 +1,14 @@
+{
+  "resources": {
+    "orderDetails": "Detalhes",
+    "listingHeaderScheduledOrderId": "ID da Programação",
+    "historyHeaderOrderTotal": "Total do Pedido",
+    "historyHeaderOrderDetails": "Detalhes do Pedido",
+    "backToMyAccount": "<< Voltar para Minha Conta",
+    "historyHeaderOrderDate": "Data do Pedido",
+    "historyHeaderOrderNumber": "Número do Pedido",
+    "orderHistoryText": "Histórico do Pedido",
+    "historyHeaderOrderStatus": "Status do Pedido",
+    "myAccount": "Minha Conta"
+  }
+}
