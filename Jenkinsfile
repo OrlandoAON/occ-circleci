@@ -14,7 +14,9 @@ pipeline {
         }
         stage('Build') {
             steps {
-                docker.build("occ-docker-jenkins")
+                script {
+                    docker.build("occ-docker-jenkins")
+                }
                 echo 'Not working. T-T'
             }
         }
