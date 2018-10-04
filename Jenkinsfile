@@ -12,7 +12,7 @@ pipeline {
             steps {
                 script {
                     scmvar = checkout scm
-                    echo scmvar
+                    // echo scmvar
                 }
             //    echo 'Not working at all! :('
             }
