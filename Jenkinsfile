@@ -4,6 +4,9 @@ pipeline {
     //     BUILD_SCRIPTS='mypipeline'
     //     BUILD_HOME='/var/lib/jenkins/workspace'
     // }
+
+    agent any
+    
      stages {
         stage('Checkout') {
             steps {
