@@ -14,18 +14,18 @@ pipeline {
                     scmvar = checkout scm
                     echo scmvar
                 }
-               // echo 'Not working at all! :('
+            //    echo 'Not working at all! :('
             }
         }
-        stage('build') {
-            steps {
-         //       echo 'Not working. T-T'
-            }
-        }
-        stage('deploy') {
-            steps {
-         //       echo 'I give up! let\'s drink some beers!'
-            }
-        }
+        // stage('build') {
+        //     steps {
+        //         echo 'Not working. T-T'
+        //     }
+        // }
+        // stage('deploy') {
+        //     steps {
+        //         echo 'I give up! let\'s drink some beers!'
+        //     }
+        // }
     }
 }
