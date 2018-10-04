@@ -7,6 +7,10 @@ pipeline {
      stages {
         stage('Checkout') {
             steps {
+                script {
+                    scmvar = checkout scm
+                    echo scmvar
+                }
                 echo 'Not working at all! :('
             }
         }
