@@ -1,12 +1,12 @@
 pipeline {
 
-    // agent any
-    agent {
-        docker {
-            image 'occ-docker-jenkins'
-            args '-u root --privileged'
-        }
-    }
+    agent any
+    // agent {
+    //     docker {
+    //         image 'occ-docker-jenkins'
+    //         args '-u root --privileged'
+    //     }
+    // }
 
      stages {
         stage('Checkout') {
@@ -21,8 +21,8 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    // docker.build("occ-docker-jenkins")
-                    docker.build()
+                    docker.build("occ-docker-jenkins")
+                    // docker.build()
                 }
                 echo 'Not working. T-T'
             }
