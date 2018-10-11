@@ -1,0 +1,3 @@
+<!-- ko if: initialized() && $data.elements.hasOwnProperty('ACLogo') -->
+<img class="cc-company-logo" height="14px" src="/file/general/avenue-code-logo-white-horizontal.svg">
+<!-- /ko -->

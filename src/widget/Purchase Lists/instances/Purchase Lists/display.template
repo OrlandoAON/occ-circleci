@@ -1,0 +1,508 @@
+ <div id="CC-purchaseLists" data-bind="visible:displaySection()=='list'">
+   <div id="CC-purchaseList-title" class="CC-purchaseList-title hidden-xs" data-bind="widgetLocaleText:'purchaseListText'"></div>
+    <hr class="hidden-xs">
+   <div id="createPurchaseList-Link">
+    <a data-bind="ccLink: 'purchaseList'"><span data-bind="widgetLocaleText:'createPurchaseListText'"></span></a>
+   </div>
+  
+  <section id="purchaseLists-info" class="col-md-12">
+   <div id="CC-purchaseList-table-md-lg-sm" class="row hidden-xs">
+      <table class="table col-md-12">
+        <thead>
+          <tr>
+            <th id="purchase-list-info-list-name-header" class="col-md-4" scope="col" data-bind="widgetLocaleText : 'nameOfPurchaseList'"></th>
+            <th id="purchase-list-info-last-modified-header" class="col-md-4" scope="col" data-bind="widgetLocaleText : 'lastModifiedDate'"></th>
+          </tr>
+        </thead>
+        <!-- ko if : (purchaseListGrid().length > 0 ) -->
+        <tbody data-bind="foreach: purchaseListGrid">
+          <tr data-bind="foreach: $data">
+            <td class="col-md-4" scope="row">
+                <a href="#" id="purchase-list-info-name" data-bind="click: $parents[1].clickPurchaseListDetails.bind($parents[1])" style=" text-decoration: underline ;">
+                  <span data-bind="text : (name.length > 30 ? name.substring(0, 29) + '..' : name)" scope="row"></span>
+                </a>
+                <section>
+                 <span data-bind="widgetLocaleText : 'numberOfItemsInPurchaseListPhone'"></span>
+                 <span data-bind="text :items.length"></span>
+                </section>
+            </td>
+            <td id="purchase-list-info-modified-date" class="col-md-4" data-bind="ccDate:{date:lastModifiedDate}" scope="row"></td>
+           </tr>
+        </tbody>
+        <!-- /ko -->
+        <!-- ko if : (purchaseListGrid().length == 0 ) -->
+         <tbody>
+         <tr>
+           <td data-bind ="widgetLocaleText:'NoItemDisplayMessage' "/>            
+           <td/>
+         </tr>
+        </tbody>
+        <!-- /ko -->
+      </table>
+    </div>
+  </section>
+  <section id="purchaseLists-info-phone" class="col-md-12">
+   <div id="CC-purchaseList-table-xs" class="row visible-xs">
+      <table class="table">
+        <thead>
+         <tr>
+            <th class="col-md-8" scope="col" data-bind="widgetLocaleText : 'nameOfPurchaseList'"></th>
+         </tr>
+        </thead>
+        <!-- ko if : (purchaseListGrid().length > 0 ) -->
+        <tbody data-bind="foreach: purchaseListGrid">
+          <tr data-bind="foreach: $data">
+            <td>
+              <a href="#" id="purchase-list-info-name" data-bind="click: $parents[1].clickPurchaseListDetails.bind($parents[1])" style=" text-decoration: underline ;">
+                  <span data-bind="text : (name.length > 30 ? name.substring(0, 29) + '..' : name)" scope="row"></span>
+               </a>
+               <section>
+                 <span data-bind="widgetLocaleText : 'numberOfItemsInPurchaseListPhone'"></span>
+                 <span data-bind="text :items.length"></span>
+               </section>
+               <section>
+                 <span data-bind="widgetLocaleText : 'lastModifiedDatePhone'"></span>
+                 <span data-bind="ccDate:{date:lastModifiedDate}"></span>
+              </section>
+             </td>
+          </tr>
+        </tbody>
+         <!-- /ko -->
+         <!-- ko if : (purchaseListGrid().length == 0 ) -->
+         <tbody>
+         <tr>
+           <td data-bind ="widgetLocaleText:'NoItemDisplayMessage' "/>            
+           <td/>
+         </tr>
+        </tbody>
+        <!-- /ko -->
+      </table>
+  </div>
+  </section>
+  
+  <!-- ko with: purchaseListListingViewModel -->
+  <div id="cc-paginated-controls-bottom" class="row col-md-12 visible-md visible-lg">
+    <div data-bind="visible : (totalNumberOfPages() > 1)">
+      <div>
+        <div class="row pull-right" data-bind="template: { name: $parent.templateAbsoluteUrl('/templates/paginationControls.template') , templateUrl: ''}"></div>
+      </div>
+    </div>
+  </div>
+  <!-- /ko -->
+</div>
+
+  <!-- ko if: !hideEditAndCreateSection() -->
+   <div id="CC-createPurchaseLists" data-bind="visible:displaySection()=='create'">
+     <div id="CC-createPurchaseList-title" class="CC-createPurchaseList-title" data-bind="widgetLocaleText:'createAPurchaseListText'">
+      </div>
+      <hr>
+        <div><span data-bind="widgetLocaleText:'listNameText'"></span></div>
+         <div class="row">
+          <div class="form-group col-md-8">
+            <div class="control">
+              <input aria-required="true" type="text" class="col-md-12 form-control" name="ListName" id="CC-purchaseListName" data-bind="widgetLocaleText: {attr: 'placeholder', value: 'purchaseListNameText'}, validatableValue:nameOfPurchaseListPrepopulate">
+              &nbsp;&nbsp;<span class="text-danger" data-bind="validationMessage: nameOfPurchaseListPrepopulate" role="alert"></span>
+            </div>
+           </div>
+        </div>
+        <div><span data-bind="widgetLocaleText:'addProductText'"></span></div>
+         <div class="row">
+          <div class="col-md-8">
+            <div id="search-row" class="right-inner-addon">
+              <input  placeholder="Search" aria-required="true" type="text" class="form-control purchase-list-query-search" id="search-bar-create" data-bind="onRender:initializer.bind($data,$element.id,$popupId)" >
+              <i class="glyphicon glyphicon-search"></i>
+            </div>
+           </div>
+        </div>
+      <div id="CC-purchaseLists-items" data-bind="visible:purchaseListViewModel().items().length > 0">
+       <section id="purchaseLists-items-info" class="col-md-12">
+       <div id="CC-purchaseList-items-table-md-lg-sm" class="row hidden-xs">
+       <table class="table col-md-12">
+        <thead>
+          <tr>
+            <th class="col-md-3" scope="col" data-bind="widgetLocaleText:'itemText'"></th>
+            <th class="col-md-8" scope="col" ></th>
+            <th class="col-md-1" scope="col" data-bind="widgetLocaleText:'quantityText'"></th>
+          </tr>
+         </thead>
+         <tbody data-bind="foreach: purchaseListViewModel().items">
+          <tr id="row-item">
+            <td>
+                <!--  ko if: thumbnailUrl -->  
+                <a data-bind="attr:{ccLink:'productDetails',href:path}">       
+                 <img data-bind="attr:{src:thumbnailUrl,id: 'CC-purchaseList-itemImage-'+productId+catRefId,alt: name,title:productName}" type="thumb"></img>
+                </a>
+                <!-- /ko -->
+                <!--  ko if: !thumbnailUrl -->
+                <img data-bind="attr:{src:'/img/no-image.jpg'}" type="thumb"></img>
+                <!-- /ko -->
+             </td>
+             <td>
+                <div id="product-details">
+                <a id="product-name-edit-list" data-bind="text:productName,attr: {ccLink:'productDetails', href: path }" >
+                </a>
+                  <div id="variant-details" data-bind="foreach: selectedOptions">
+                   <span data-bind="text:optionName+':'"></span>
+                   <span data-bind="text:optionValue"></span><br>
+                  </div>
+                </div>
+            </td>
+             <td>
+                <div>
+                  <input aria-required="true" class="form-control" type="text" id="input-qty" data-bind="validatableValue:$data.quantityDesired,valueUpdate: 'afterkeydown'">
+                </div>
+                <div id="delete-item-icon">
+                  <a href="#" data-bind="click:function(){$parent.removeItem($data);}">
+                    <img src="/img/remove.png" alt="Remove">
+                  </a>
+                </div>
+                <br>
+                <span class="text-danger" data-bind="validationMessage: $data.quantityDesired" role="alert"></span>
+            </td>
+          </tr>
+         </tbody>
+        </table>
+      </div>
+    </section>
+    
+    <!-- create purchase list : list of items added -->
+    <section id="purchaseLists-items-info-phone" class="col-md-12">
+       <div id="CC-purchaseList-items-table-md-lg-sm" class="row visible-xs">
+       <table class="table col-md-12">
+        <thead>
+          <tr>
+            <th class="col-md-5" scope="col" data-bind="widgetLocaleText:'itemText'"></th>
+            <th class="col-md-7" scope="col" ></th>
+          </tr>
+         </thead>
+         <tbody data-bind="foreach: purchaseListViewModel().items">
+          <tr id="row-item">
+            <td>
+                <!--  ko if: thumbnailUrl -->  
+                <a data-bind="attr:{ccLink:'productDetails',href:path}">       
+                 <img data-bind="attr:{src:thumbnailUrl,id: 'CC-purchaseList-itemImage-'+productId+catRefId,alt: name,title:productName}" type="thumb"></img>
+                </a>
+                <!-- /ko -->
+                <!--  ko if: !thumbnailUrl -->
+                <img data-bind="attr:{src:'/img/no-image.jpg'}" type="thumb"></img>
+                <!-- /ko -->
+             </td>
+             <td>
+                <div id="product-details">
+                <a id="product-name-edit-list" data-bind="text:productName,attr: {ccLink:'productDetails', href: path }" >
+                </a>
+                  <div id="variant-details" data-bind="foreach: selectedOptions">
+                   <span data-bind="text:optionName+':'"></span>
+                   <span data-bind="text:optionValue"></span><br>
+                  </div>
+                </div>
+            </td>
+          </tr>
+          <tr id="row-quantity">
+           <td>
+             <span data-bind="widgetLocaleText:'quantityText'"></span>
+           </td>
+            <td>
+                <div>
+                  <input aria-required="true" class="form-control" type="text" id="input-qty-phone" data-bind="validatableValue:$data.quantityDesired,valueUpdate: 'afterkeydown'">
+                </div>
+                <div id="delete-item-icon-phone">
+                  <a href="#" data-bind="click:function(){$parent.removeItem($data);}">
+                    <img src="/img/remove.png" alt="Remove">
+                  </a>
+                </div>
+                <br>
+                <span class="text-danger" data-bind="validationMessage: $data.quantityDesired" role="alert" style="float: right;"></span>
+            </td>
+          </tr>
+         </tbody>
+        </table>
+      </div>
+    </section>
+    <!--  -->
+  </div>
+ <!-- purchase list items end -->
+    <div id="CC-purchaseList-create-cancel-control" class="row CC-purchaseList-create-cancel-control">
+     <button class="cc-button-primary col-sm-2 col-xs-12 pull-right CC-purchaseList-create" id="CC-purchaseList-create" data-bind="click:createPurchaseList">
+      <span data-bind="widgetLocaleText:'buttonCreate'"></span>
+     </button>
+     <button class="cc-button-secondary col-sm-2 col-xs-12 pull-right CC-purchaseList-cancel" id="CC-purchaseList-cancel" data-bind="click:hideCreatePurchaseListSection">
+      <span data-bind="widgetLocaleText:'buttonCancel'"></span>
+     </button>
+    </div>
+   </div>
+  
+    <div id="CC-editPurchaseList" data-bind="visible:displaySection()=='edit'">
+     <div id="CC-editPurchaseList-title" class="CC-editPurchaseList-title" data-bind="widgetLocaleText:'editPurchaseListText'">
+      </div>
+      <hr>
+        <div>
+         <span data-bind="widgetLocaleText:'listNameText'"></span>
+         <span id="last-modified-date-edit-section" class="hidden-xs" data-bind="widgetLocaleText:'lastModifiedDate'" style="float: right ;margin-right: 9px;"></span>
+        </div>
+         <div class="row">
+          <div class="form-group col-md-8">
+            <div class="control">
+              <input aria-required="true" type="text" class="col-md-12 form-control" name="ListName" id="CC-editPurchaseListName" data-bind="validatableValue:purchaseListViewModel().purchaseListName">
+              &nbsp;&nbsp;<span class="text-danger" data-bind="validationMessage: purchaseListViewModel().purchaseListName" role="alert"></span>
+            </div>
+           </div>
+          <span id="last-modified-date-edit-section-display" class="hidden-xs" data-bind="ccDate:{date:$data.purchaseListViewModel().lastModifiedDate()}" style="float: right ;margin-right: 24px;"></span>
+        </div>
+        <div id="last-modified-date-phone" class="visible-xs">
+         <span id="last-modified-date-edit-section" data-bind="widgetLocaleText:'lastModifiedDate'"></span><br>
+         <span id="last-modified-date-edit-section-display" data-bind="ccDate:{date:$data.purchaseListViewModel().lastModifiedDate()}"></span><br>
+        </div>
+         <div>
+          <span data-bind="widgetLocaleText:'addProductText'"></span>
+         </div>
+         <div id="search-row" class="row">
+           <div class="col-md-8">
+            <div class="right-inner-addon">
+              <input placeholder="Search" aria-required="true" type="text" class="form-control purchase-list-query-search" id="search-bar-edit" data-bind="onRender:initializer.bind($data,$element.id,$popupId)" >
+              <i class="glyphicon glyphicon-search"></i>
+            </div>
+           </div>
+        </div>
+  <!--purchase list items list start-->
+   <div id="CC-purchaseLists-items">
+    <section id="purchaseLists-items-info" class="col-md-12">
+     <div id="CC-purchaseList-items-table-md-lg-sm" class="row hidden-xs">
+       <table class="table col-md-12">
+        <thead>
+          <tr>
+            <th class="col-md-1" scope="col" ><input type="checkbox" data-bind="checked:$data.selectedAllPurchaseListItems"/></th>
+            <th class="col-md-2" scope="col" data-bind="widgetLocaleText:'itemText'"></th>
+            <th class="col-md-8" scope="col" ></th>
+            <th class="col-md-1" scope="col" data-bind="widgetLocaleText:'quantityText'"></th>
+          </tr>
+         </thead>
+         <!-- ko if : (purchaseListViewModel().items().length > 0 ) -->
+         <tbody data-bind="foreach: purchaseListViewModel().items">
+          <tr id="row-item">
+            <td>
+              <input type="checkbox" data-bind="checkedValue:$data, checked:$parent.selectedPurchaseListItems"/>
+            </td>
+            <td>
+                <!--  ko if: thumbnailUrl -->  
+                <a data-bind="ccLink:$data">
+                 <img data-bind="attr:{src:thumbnailUrl,id: 'CC-purchaseList-itemImage-'+productId+catRefId,alt: name,title:productName}" type="thumb"></img>
+                </a>
+                <!-- /ko -->
+                <!--  ko if: !thumbnailUrl -->
+                <img data-bind="attr:{src:'/img/no-image.jpg'}" type="thumb"></img>
+                <!-- /ko -->
+             </td>
+             <td>
+                <div id="product-details">
+                  <!--  ko if: !productName == "" -->
+                  <a data-bind="ccLink :$data, attr: { id: 'CC-productNameEditList-' + productId + '-' + catRefId }"></a>
+                  <div id="variant-details" data-bind="foreach: selectedOptions">
+                   <span data-bind="text:optionName+':'"></span>
+                   <span data-bind="text:optionValue"></span><br>
+                  </div>
+                  <!-- /ko -->
+                  <!--  ko if: productName == "" -->
+                    <span data-bind="widgetLocaleText:'deletedItemText'"></span>
+                  <!-- /ko -->
+                </div>
+            </td>
+             <td>
+                <!--  ko if: !isProductDeleted -->
+                <div>
+                  <input aria-required="true" class="form-control" type="text" id="input-qty" data-bind="validatableValue:$data.quantityDesired,valueUpdate: 'afterkeydown'">
+                </div>
+                <!-- /ko -->
+                <!--  ko if: isProductDeleted -->
+                <div>
+                  <input aria-required="true" class="form-control" type="text" id="input-qty" data-bind="validatableValue:$data.quantityDesired" disabled>
+                </div>
+                <!-- /ko -->
+                <div id="delete-item-icon">
+                  <a href="#" data-bind="click:function(){$parent.removeItem($data);}">
+                    <img src="/img/remove.png" alt="Remove">
+                  </a>
+                </div>
+                <br>
+                <span class="text-danger" data-bind="validationMessage: $data.quantityDesired" role="alert"></span>
+            </td>
+          </tr>
+         </tbody>
+       <!-- /ko -->
+     </table>
+     <!-- ko if : (purchaseListViewModel().items().length == 0 ) -->
+       <div data-bind ="widgetLocaleText:'NoItemDisplayMessage' "/>            
+     <!-- /ko -->
+    </div>
+   </section>
+   <section id="purchaseLists-items-info-phone" class="col-md-12">
+     <div id="CC-purchaseList-items-table-md-lg-sm" class="row visible-xs">
+       <table class="table col-md-12">
+        <thead>
+          <tr>
+            <th class="col-md-1" scope="col" ><input type="checkbox" data-bind="checked:$data.selectedAllPurchaseListItems"/></th>
+            <th class="col-md-2" scope="col" data-bind="widgetLocaleText:'itemText'"></th>
+            <th class="col-md-8" scope="col" ></th>
+          </tr>
+         </thead>
+         <!-- ko if : (purchaseListViewModel().items().length > 0 ) -->
+         <tbody data-bind="foreach: purchaseListViewModel().items">
+          <tr id="row-item">
+            <td>
+              <input type="checkbox" data-bind="checkedValue:$data, checked:$parent.selectedPurchaseListItems"/>
+            </td>
+            <td>
+                <!--  ko if: thumbnailUrl -->  
+                <a data-bind="attr:{ccLink:'productDetails',href:path}">       
+                 <img data-bind="attr:{src:thumbnailUrl,id: 'CC-purchaseList-itemImage-'+productId+catRefId,alt: name,title:productName}" type="thumb"></img>
+                </a>
+                <!-- /ko -->
+                <!--  ko if: !thumbnailUrl -->
+                <img data-bind="attr:{src:'/img/no-image.jpg'}" type="thumb"></img>
+                <!-- /ko -->
+             </td>
+             <td>
+                <div id="product-details">
+                <!--  ko if: !productName == "" -->
+                  <a id="product-name-edit-list" data-bind="text:productName,attr: {ccLink:'productDetails', href: path }" ></a>
+                  <div id="variant-details" data-bind="foreach: selectedOptions">
+                   <span data-bind="text:optionName+':'"></span>
+                   <span data-bind="text:optionValue"></span><br>
+                  </div>
+                  <!-- /ko -->
+                  <!--  ko if: productName == "" -->
+                    <span data-bind="widgetLocaleText:'deletedItemText'"></span>
+                  <!-- /ko -->
+                </div>
+            </td>
+          </tr>
+          <tr id="row-quantity">
+            <td><span data-bind="widgetLocaleText:'quantityText'" ></span></td>
+            <td></td>
+             <td>
+                <!--  ko if: !isProductDeleted -->
+                <div>
+                  <input aria-required="true" class="form-control" type="text" id="input-qty-phone" data-bind="validatableValue:$data.quantityDesired,valueUpdate: 'afterkeydown'">
+                </div>
+                <!-- /ko -->
+                <!--  ko if: isProductDeleted -->
+                <div>
+                  <input aria-required="true" class="form-control" type="text" id="input-qty-phone" data-bind="validatableValue:$data.quantityDesired" disabled>
+                </div>
+                <!-- /ko -->
+                <div id="delete-item-icon-phone">
+                  <a href="#" data-bind="click:function(){$parent.removeItem($data);}">
+                    <img src="/img/remove.png" alt="Remove">
+                  </a>
+                </div>
+                <br>
+                <span class="text-danger" data-bind="validationMessage: $data.quantityDesired" role="alert" style="float: right;"></span>
+            </td>
+          </tr>
+         </tbody>
+       <!-- /ko -->
+     </table>
+     <!-- ko if : (purchaseListViewModel().items().length == 0 ) -->
+       <div data-bind ="widgetLocaleText:'NoItemDisplayMessage' "/>            
+     <!-- /ko -->
+    </div>
+   </section>
+  </div>
+ <!-- purchase list items end -->
+   <div id="add-to-cart-button" class="row">
+   <!-- ko if:(cart().items().length > 0 && selectedPurchaseListItems().length>0 && !invalidQuantityCheck()) -->
+   <button class="cc-button-primary col-sm-2 col-xs-12 pull-right" data-bind="widgetLocaleText:'buttonAddToCart'" data-toggle="modal"
+         data-id=$parents[1].orderId
+         data-target="#cc-addToCart-ModalContainer"
+         type="button">
+    </button>
+    <!-- /ko -->
+    <!-- ko if:(cart().items().length == 0 && selectedPurchaseListItems().length>0 && dirtyCheck() && !invalidQuantityCheck()) -->
+   <button class="cc-button-primary col-sm-2 col-xs-12 pull-right" data-bind="widgetLocaleText:'buttonAddToCart'" data-toggle="modal"
+         data-id=$parents[1].orderId
+         data-target="#cc-addToCart-ModalContainer"
+         type="button">
+    </button>
+    <!-- /ko -->
+    <!-- ko if:(cart().items().length == 0 && selectedPurchaseListItems().length>0 && !dirtyCheck() && !invalidQuantityCheck()) -->
+     <button class="cc-button-primary col-sm-2 col-xs-12 pull-right" data-bind="click:addToCart">
+      <span data-bind="widgetLocaleText:'buttonAddToCart'"></span>
+     </button>
+    <!-- /ko -->
+    <!-- ko if:(selectedPurchaseListItems().length>0 && invalidQuantityCheck()) -->
+     <button class="cc-button-primary col-sm-2 col-xs-12 pull-right" data-bind="click:addToCart">
+      <span data-bind="widgetLocaleText:'buttonAddToCart'"></span>
+     </button>
+    <!-- /ko -->
+     
+   </div>
+   <div id="CC-editPurchaseList-create-cancel-delete-control" class="row">
+     <button class="cc-button-primary col-sm-2 col-xs-12 pull-right" id="CC-editPurchaseList-save" data-bind="click:updatePurchseList">
+      <span data-bind="widgetLocaleText:'buttonSave'"></span>
+     </button>
+     <button class="cc-button-secondary col-sm-2 col-xs-12 pull-right" id="CC-editPurchaseList-cancel" data-bind="click:hideEditPurchaseListSection">
+      <span data-bind="widgetLocaleText:'buttonCancel'"></span>
+     </button>
+     <button class="cc-button-secondary col-sm-2 col-xs-12 pull-right" id="CC-editPurchaseList-delete" data-bind="click:deleteSelectedPurchaseList">
+      <span data-bind="widgetLocaleText:'buttonDelete'"></span>
+     </button>
+    </div>
+ </div>
+ <!-- /ko -->
+ <!-- Add to cart Modal-->
+            <div data-bind="modal: 0,
+                            modalTabbingContraint"
+                  class="modal width-fixed fade cc-modalForm"
+                  id="cc-addToCart-ModalContainer">
+              <div class="modal-dialog modal-sm modal-dialog-width">
+                <div class="modal-content">
+                  <div class="modal-body">
+                   <!-- ko if:(cart().items().length > 0 && !dirtyCheck()) -->
+                    <text data-bind="widgetLocaleText:'mergeWithCartItemsModalMessage'"
+                        class="modal-title text-center"></text>
+                   <!-- /ko -->
+                   <!-- ko if:(cart().items().length == 0 && dirtyCheck()) -->
+                    <text data-bind="widgetLocaleText:'unsavedChangesModalMessage'"
+                        class="modal-title text-center"></text>
+                   <!-- /ko -->
+                   <!-- ko if:(cart().items().length > 0 && dirtyCheck()) -->
+                    <text data-bind="widgetLocaleText:'populatedCartAndDirty'"
+                        class="modal-title text-center"></text>
+                   <!-- /ko -->
+                  </div>
+                  <div class="modal-footer">
+                    <div><button data-bind="click: $data.addToCart.bind($data),
+                                       widgetLocaleText:'buttonOk'"
+                                       data-dismiss="modal"
+                            type="button"
+                            class="btn btn-primary btn-sm"></button>
+                    <button data-bind="widgetLocaleText:'buttonCancel'"
+                            data-dismiss="modal"
+                            type="button"
+                            class="btn btn-primary btn-sm"></button></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+ <div class="modal fade" id="CC-purchaseList-delete-modal-1"
+     tabindex="-1" role="alert" data-bind="modalTabbingContraint">
+   <div class="modal-dialog modal-dialog-width" id="CC-purchaseList-delete-modal-2">
+     <div class="modal-content" id="CC-purchaseList-delete-modal-3">
+       <div class="modal-header cc-purchaseList-modal-heading cc-purchaseList-confirm-icon" id="CC-purchaseList-delete-modal-header-1">
+         <button type="button" class="close" data-dismiss="modal" id="CC-purchaseList-delete-modal-header-2" aria-hidden="true">&times;</button>
+       </div>
+       <div class="modal-body cc-purchaseList-body-modal" id="CC-purchaseList-delete-modal-modalBody-3">
+         <p data-bind="widgetLocaleText:'confirmDeletePurchageListMessage'" align="center" id="CC-purchaseList-delete-modal-bodyText-3"></p>
+       </div>
+       <div class="modal-footer cc-purchaseList-modal-footer" id="CC-purchaseList-delete-modal-footer-3">
+         <button class="btn cc-button-secondary" id="CC-purchaseList-delete-modal-cancel-3" data-dismiss="modal">
+           <span id="CC-purchaseList-delete-modal-discard-3" data-bind="widgetLocaleText:'buttonCancel'"></span>
+         </button>
+         <button class="btn cc-button-primary" id="CC-purchaseList-delete-modal-submit-3" data-bind="click: handleDeleteSelectedPurchaseList">
+           <span id="CC-purchaseList-delete-modal-save-3" data-bind="widgetLocaleText:'buttonDelete'"></span>
+         </button>
+       </div> 
+     </div>
+   </div>
+ </div>
