@@ -1,9 +1,0 @@
-{
-  "repositoryId": "B2CProfileSideMenu_v1",
-  "widgetType": "B2CProfileSideMenu",
-  "version": 1,
-  "displayName": "B2C Profile Side Menu",
-  "global": false,
-  "source": 101,
-  "javascript": "b2c-profile-side-menu"
-}

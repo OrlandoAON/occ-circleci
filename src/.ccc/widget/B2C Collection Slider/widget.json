@@ -1,9 +1,0 @@
-{
-  "repositoryId": "B2CCollectionSlider_v1",
-  "widgetType": "B2CCollectionSlider",
-  "version": 1,
-  "displayName": "B2C Collection Slider",
-  "global": false,
-  "source": 101,
-  "javascript": "b2c-collection-slider"
-}

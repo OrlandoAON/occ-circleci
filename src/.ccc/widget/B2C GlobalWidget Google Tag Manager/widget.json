@@ -1,9 +1,0 @@
-{
-  "repositoryId": "B2CGlobalWidgetGoogleTagManager_v1",
-  "widgetType": "B2CGlobalWidgetGoogleTagManager",
-  "version": 1,
-  "displayName": "B2C GlobalWidget Google Tag Manager",
-  "global": true,
-  "source": 101,
-  "javascript": "b2c-globalwidget-google-tag-manager"
-}

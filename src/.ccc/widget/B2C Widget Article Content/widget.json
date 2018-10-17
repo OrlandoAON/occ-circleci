@@ -1,9 +1,0 @@
-{
-  "repositoryId": "B2CWidgetArticleContent_v1",
-  "widgetType": "B2CWidgetArticleContent",
-  "version": 1,
-  "displayName": "B2C Widget Article Content",
-  "global": false,
-  "source": 101,
-  "javascript": "b2c-widget-article-content"
-}

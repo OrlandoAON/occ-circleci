@@ -1,9 +1,0 @@
-{
-  "repositoryId": "resortb2ccollectionproducts_v1",
-  "widgetType": "resortb2ccollectionproducts",
-  "version": 1,
-  "displayName": "Resort B2C Collection Products",
-  "global": false,
-  "source": 101,
-  "javascript": "resortb2ccollectionproducts"
-}
