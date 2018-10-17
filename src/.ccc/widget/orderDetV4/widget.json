@@ -1,0 +1,10 @@
+{
+  "repositoryId": "RStrocaAutoOD_v4",
+  "widgetType": "RStrocaAutoOD",
+  "version": 4,
+  "displayName": "orderDetV4",
+  "global": false,
+  "i18nresources": "accountorderdetails",
+  "source": 101,
+  "javascript": "account-order-details"
+}

@@ -1,0 +1,10 @@
+{
+  "repositoryId": "oeShowroomListingB2B_v7",
+  "widgetType": "oeShowroomListingB2B",
+  "version": 7,
+  "displayName": "oeShowroomListingB2B",
+  "global": false,
+  "i18nresources": "oeShowroomListingB2B",
+  "source": 101,
+  "javascript": "oeShowroomListingB2B"
+}

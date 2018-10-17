@@ -1,0 +1,10 @@
+{
+  "repositoryId": "b2bTestContact_v3",
+  "widgetType": "b2bTestContact",
+  "version": 3,
+  "displayName": "Contacts",
+  "global": false,
+  "i18nresources": "delegatedadmincontacts",
+  "source": 101,
+  "javascript": "delegated-admin-contacts"
+}

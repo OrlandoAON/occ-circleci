@@ -1,0 +1,10 @@
+{
+  "repositoryId": "resortb2cfooter_v1",
+  "widgetType": "resortb2cfooter",
+  "version": 1,
+  "displayName": "Resort B2C Footer",
+  "global": false,
+  "i18nresources": "resortb2cfooter",
+  "source": 101,
+  "javascript": "resortb2cfooter"
+}

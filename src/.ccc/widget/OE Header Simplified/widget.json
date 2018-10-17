@@ -1,0 +1,10 @@
+{
+  "repositoryId": "oeHeaderSimplified_v1",
+  "widgetType": "oeHeaderSimplified",
+  "version": 1,
+  "displayName": "OE Header Simplified",
+  "global": false,
+  "i18nresources": "oeHeader",
+  "source": 101,
+  "javascript": "oeHeader"
+}

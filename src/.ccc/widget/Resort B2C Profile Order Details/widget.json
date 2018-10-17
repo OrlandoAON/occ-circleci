@@ -1,0 +1,10 @@
+{
+  "repositoryId": "ResortB2CProfileOrderDetails_v1",
+  "widgetType": "ResortB2CProfileOrderDetails",
+  "version": 1,
+  "displayName": "Resort B2C Profile Order Details",
+  "global": false,
+  "i18nresources": "resortB2CProfileOrderDetails",
+  "source": 101,
+  "javascript": "resortB2CProfileOrderDetails"
+}

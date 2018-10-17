@@ -1,0 +1,10 @@
+{
+  "repositoryId": "hopeDeliveryOptions_v1",
+  "widgetType": "hopeDeliveryOptions",
+  "version": 1,
+  "displayName": "hopeDeliveryOptions",
+  "global": false,
+  "i18nresources": "hopeDeliveryOptions",
+  "source": 101,
+  "javascript": "hopeDeliveryOptions"
+}

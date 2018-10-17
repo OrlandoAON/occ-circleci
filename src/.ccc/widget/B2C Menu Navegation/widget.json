@@ -1,0 +1,10 @@
+{
+  "repositoryId": "B2CMenuNavegation_v5",
+  "widgetType": "B2CMenuNavegation",
+  "version": 5,
+  "displayName": "B2C Menu Navegation",
+  "global": false,
+  "i18nresources": "megaMenu",
+  "source": 101,
+  "javascript": "b2c-menu-navegation"
+}

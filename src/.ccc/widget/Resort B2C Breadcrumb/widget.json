@@ -1,0 +1,9 @@
+{
+  "repositoryId": "resortb2cbreadcrumb_v1",
+  "widgetType": "resortb2cbreadcrumb",
+  "version": 1,
+  "displayName": "Resort B2C Breadcrumb",
+  "global": false,
+  "source": 101,
+  "javascript": "resortb2cbreadcrumb"
+}

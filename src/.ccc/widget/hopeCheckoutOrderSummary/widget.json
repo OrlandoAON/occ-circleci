@@ -1,0 +1,10 @@
+{
+  "repositoryId": "hopeCheckoutOrderSummary_v1",
+  "widgetType": "hopeCheckoutOrderSummary",
+  "version": 1,
+  "displayName": "hopeCheckoutOrderSummary",
+  "global": false,
+  "i18nresources": "hopeCheckoutOrderSummary",
+  "source": 101,
+  "javascript": "hopeCheckoutOrderSummary"
+}

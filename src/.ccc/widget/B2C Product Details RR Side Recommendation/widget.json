@@ -1,0 +1,10 @@
+{
+  "repositoryId": "b2cWidgetProductDetailsRRSideRecommendation_v1",
+  "widgetType": "b2cWidgetProductDetailsRRSideRecommendation",
+  "version": 1,
+  "displayName": "B2C Product Details RR Side Recommendation",
+  "global": false,
+  "i18nresources": "b2c.productdetails.rr.siderecommendation",
+  "source": 101,
+  "javascript": "b2c-product-details-rr-side-recommendation"
+}

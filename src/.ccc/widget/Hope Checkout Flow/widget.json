@@ -1,0 +1,10 @@
+{
+  "repositoryId": "hopeCheckoutFlow_v1",
+  "widgetType": "hopeCheckoutFlow",
+  "version": 1,
+  "displayName": "Hope Checkout Flow",
+  "global": false,
+  "i18nresources": "hopeCheckoutFlow",
+  "source": 101,
+  "javascript": "hopeCheckoutFlow"
+}

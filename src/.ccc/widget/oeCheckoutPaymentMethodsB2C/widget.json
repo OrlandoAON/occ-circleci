@@ -1,0 +1,10 @@
+{
+  "repositoryId": "oeCheckoutPaymentMethodsB2C_v1",
+  "widgetType": "oeCheckoutPaymentMethodsB2C",
+  "version": 1,
+  "displayName": "oeCheckoutPaymentMethodsB2C",
+  "global": false,
+  "i18nresources": "oeCheckoutPaymentMethodsB2C",
+  "source": 101,
+  "javascript": "oeCheckoutPaymentMethodsB2C"
+}

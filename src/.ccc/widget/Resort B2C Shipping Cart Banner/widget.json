@@ -1,0 +1,10 @@
+{
+  "repositoryId": "resortB2cShippingCartBanner_v1",
+  "widgetType": "resortB2cShippingCartBanner",
+  "version": 1,
+  "displayName": "Resort B2C Shipping Cart Banner",
+  "global": false,
+  "i18nresources": "resortB2cShippingCartBanner",
+  "source": 101,
+  "javascript": "resortb2cshippingcartbanner"
+}

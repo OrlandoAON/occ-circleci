@@ -1,0 +1,10 @@
+{
+  "repositoryId": "resortB2cCheckoutAddress_v1",
+  "widgetType": "resortB2cCheckoutAddress",
+  "version": 1,
+  "displayName": "Resort B2C Checkout Address",
+  "global": false,
+  "i18nresources": "resortb2ccheckoutaddress",
+  "source": 101,
+  "javascript": "resortb2ccheckoutaddress"
+}

@@ -1,0 +1,10 @@
+{
+  "repositoryId": "b2cWidgetProductDetailsCompreJuntoRR_v1",
+  "widgetType": "b2cWidgetProductDetailsCompreJuntoRR",
+  "version": 1,
+  "displayName": "B2C Product Details RR Compre Junto",
+  "global": false,
+  "i18nresources": "b2cproductdetailsrrcomprejunto",
+  "source": 101,
+  "javascript": "b2c-product-details-rr-compre-junto"
+}

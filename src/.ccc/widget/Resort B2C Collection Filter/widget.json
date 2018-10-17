@@ -1,0 +1,10 @@
+{
+  "repositoryId": "resortb2ccollectionfilter_v1",
+  "widgetType": "resortb2ccollectionfilter",
+  "version": 1,
+  "displayName": "Resort B2C Collection Filter",
+  "global": false,
+  "i18nresources": "resortb2ccollectionfilter",
+  "source": 101,
+  "javascript": "resortb2ccollectionfilter"
+}

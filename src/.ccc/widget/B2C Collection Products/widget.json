@@ -1,0 +1,10 @@
+{
+  "repositoryId": "B2CCollectionProducts_v1",
+  "widgetType": "B2CCollectionProducts",
+  "version": 1,
+  "displayName": "B2C Collection Products",
+  "global": false,
+  "i18nresources": "productlisting",
+  "source": 101,
+  "javascript": "b2c-collection-products"
+}

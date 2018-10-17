@@ -1,0 +1,10 @@
+{
+  "repositoryId": "hpRelatedProducts_v1",
+  "widgetType": "hpRelatedProducts",
+  "version": 1,
+  "displayName": "Hope Related Products",
+  "global": false,
+  "i18nresources": "hpRelatedProducts",
+  "source": 101,
+  "javascript": "hpRelatedProducts"
+}

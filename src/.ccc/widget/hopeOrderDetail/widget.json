@@ -1,0 +1,10 @@
+{
+  "repositoryId": "hopeOrderDetail_v9",
+  "widgetType": "hopeOrderDetail",
+  "version": 9,
+  "displayName": "hopeOrderDetail",
+  "global": false,
+  "i18nresources": "orderdetails",
+  "source": 101,
+  "javascript": "order-details"
+}

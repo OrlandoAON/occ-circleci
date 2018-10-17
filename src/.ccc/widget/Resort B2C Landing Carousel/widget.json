@@ -1,0 +1,9 @@
+{
+  "repositoryId": "ResortB2cLandingCarousel_v1",
+  "widgetType": "ResortB2cLandingCarousel",
+  "version": 1,
+  "displayName": "Resort B2C Landing Carousel",
+  "global": false,
+  "source": 101,
+  "javascript": "resortb2clandingcarousel"
+}

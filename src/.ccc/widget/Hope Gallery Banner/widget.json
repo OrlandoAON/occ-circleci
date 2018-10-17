@@ -1,0 +1,10 @@
+{
+  "repositoryId": "hopeGalleryBanner_v1",
+  "widgetType": "hopeGalleryBanner",
+  "version": 1,
+  "displayName": "Hope Gallery Banner",
+  "global": false,
+  "i18nresources": "hopeGalleryBanner",
+  "source": 101,
+  "javascript": "hopeGalleryBanner"
+}

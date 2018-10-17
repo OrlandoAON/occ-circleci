@@ -1,0 +1,10 @@
+{
+  "repositoryId": "hpOrderHistory_v1",
+  "widgetType": "hpOrderHistory",
+  "version": 1,
+  "displayName": "Hope Order History",
+  "global": false,
+  "i18nresources": "hpOrderHistory",
+  "source": 101,
+  "javascript": "hpOrderHistory"
+}

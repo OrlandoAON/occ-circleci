@@ -1,0 +1,10 @@
+{
+  "repositoryId": "oeBreadcrumbB2B_v2",
+  "widgetType": "oeBreadcrumbB2B",
+  "version": 2,
+  "displayName": "oeBreadcrumbB2B",
+  "global": false,
+  "i18nresources": "oeBreadcrumbB2B",
+  "source": 101,
+  "javascript": "oeBreadcrumbB2B"
+}

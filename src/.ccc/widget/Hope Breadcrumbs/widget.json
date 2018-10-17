@@ -1,0 +1,10 @@
+{
+  "repositoryId": "hpBreadcrumb_v1",
+  "widgetType": "hpBreadcrumb",
+  "version": 1,
+  "displayName": "Hope Breadcrumbs",
+  "global": false,
+  "i18nresources": "hpBreadcrumb",
+  "source": 101,
+  "javascript": "hpBreadcrumb"
+}

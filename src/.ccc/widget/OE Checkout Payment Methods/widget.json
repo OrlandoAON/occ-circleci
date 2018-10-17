@@ -1,0 +1,10 @@
+{
+  "repositoryId": "oeCheckoutPaymentMethods_v1",
+  "widgetType": "oeCheckoutPaymentMethods",
+  "version": 1,
+  "displayName": "OE Checkout Payment Methods",
+  "global": false,
+  "i18nresources": "oeCheckoutPaymentMethods",
+  "source": 101,
+  "javascript": "oeCheckoutPaymentMethods"
+}

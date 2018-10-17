@@ -1,0 +1,10 @@
+{
+  "repositoryId": "hopeCheckoutConfirmation_v2",
+  "widgetType": "hopeCheckoutConfirmation",
+  "version": 2,
+  "displayName": "hopeCheckoutConfirmation",
+  "global": false,
+  "i18nresources": "hopeCheckoutConfirmation",
+  "source": 101,
+  "javascript": "hopeCheckoutConfirmation"
+}

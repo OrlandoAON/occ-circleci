@@ -1,0 +1,10 @@
+{
+  "repositoryId": "hopeCheckoutStatusBar_v1",
+  "widgetType": "hopeCheckoutStatusBar",
+  "version": 1,
+  "displayName": "hopeCheckoutStatusBar",
+  "global": false,
+  "i18nresources": "hopeCheckoutStatusBar",
+  "source": 101,
+  "javascript": "hopeCheckoutStatusBar"
+}

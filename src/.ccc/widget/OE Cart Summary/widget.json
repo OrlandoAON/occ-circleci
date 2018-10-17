@@ -1,0 +1,10 @@
+{
+  "repositoryId": "oeCartSummary_v1",
+  "widgetType": "oeCartSummary",
+  "version": 1,
+  "displayName": "OE Cart Summary",
+  "global": false,
+  "i18nresources": "oeCartSummary",
+  "source": 101,
+  "javascript": "oeCartSummary"
+}

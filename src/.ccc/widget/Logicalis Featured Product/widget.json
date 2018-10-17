@@ -1,0 +1,10 @@
+{
+  "repositoryId": "logFeaturedProduct_v1",
+  "widgetType": "logFeaturedProduct",
+  "version": 1,
+  "displayName": "Logicalis Featured Product",
+  "global": false,
+  "i18nresources": "logFeaturedProduct",
+  "source": 101,
+  "javascript": "logFeaturedProduct"
+}

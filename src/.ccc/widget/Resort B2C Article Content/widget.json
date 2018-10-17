@@ -1,0 +1,9 @@
+{
+  "repositoryId": "resortb2carticlecontent_v1",
+  "widgetType": "resortb2carticlecontent",
+  "version": 1,
+  "displayName": "Resort B2C Article Content",
+  "global": false,
+  "source": 101,
+  "javascript": "resortb2carticlecontent"
+}

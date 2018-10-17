@@ -1,0 +1,10 @@
+{
+  "repositoryId": "extest_v1",
+  "widgetType": "extest",
+  "version": 1,
+  "displayName": "extest",
+  "global": false,
+  "i18nresources": "extest",
+  "source": 101,
+  "javascript": "extest"
+}

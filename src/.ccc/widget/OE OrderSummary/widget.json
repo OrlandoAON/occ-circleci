@@ -1,0 +1,10 @@
+{
+  "repositoryId": "oeOrderSummary_v1",
+  "widgetType": "oeOrderSummary",
+  "version": 1,
+  "displayName": "OE OrderSummary",
+  "global": false,
+  "i18nresources": "oeOrderSummary",
+  "source": 101,
+  "javascript": "oeOrderSummary"
+}

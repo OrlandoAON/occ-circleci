@@ -1,0 +1,10 @@
+{
+  "repositoryId": "hopeFooter_v1",
+  "widgetType": "hopeFooter",
+  "version": 1,
+  "displayName": "Hope Footer",
+  "global": false,
+  "i18nresources": "hopeFooter",
+  "source": 101,
+  "javascript": "hopeFooter"
+}

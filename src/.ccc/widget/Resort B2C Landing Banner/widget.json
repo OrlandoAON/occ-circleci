@@ -1,0 +1,10 @@
+{
+  "repositoryId": "resortb2clandingbanner_v1",
+  "widgetType": "resortb2clandingbanner",
+  "version": 1,
+  "displayName": "Resort B2C Landing Banner",
+  "global": false,
+  "i18nresources": "resortb2clandingbanner",
+  "source": 101,
+  "javascript": "resortb2clandingbanner"
+}

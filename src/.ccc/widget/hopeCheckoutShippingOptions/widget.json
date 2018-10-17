@@ -1,0 +1,10 @@
+{
+  "repositoryId": "hopeCheckoutShippingOptions_v1",
+  "widgetType": "hopeCheckoutShippingOptions",
+  "version": 1,
+  "displayName": "hopeCheckoutShippingOptions",
+  "global": false,
+  "i18nresources": "hopeCheckoutShippingOptions",
+  "source": 101,
+  "javascript": "hopeCheckoutShippingOptions"
+}

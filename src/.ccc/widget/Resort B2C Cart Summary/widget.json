@@ -1,0 +1,10 @@
+{
+  "repositoryId": "resortB2cCartSummary_v1",
+  "widgetType": "resortB2cCartSummary",
+  "version": 1,
+  "displayName": "Resort B2C Cart Summary",
+  "global": false,
+  "i18nresources": "resortB2cCartSummary",
+  "source": 101,
+  "javascript": "resortB2cCartSummary"
+}

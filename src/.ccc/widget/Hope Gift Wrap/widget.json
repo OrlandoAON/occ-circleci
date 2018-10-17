@@ -1,0 +1,10 @@
+{
+  "repositoryId": "hopeGiftWrap_v1",
+  "widgetType": "hopeGiftWrap",
+  "version": 1,
+  "displayName": "Hope Gift Wrap",
+  "global": false,
+  "i18nresources": "hopeGiftWrap",
+  "source": 101,
+  "javascript": "hopeGiftWrap"
+}

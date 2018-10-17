@@ -1,0 +1,10 @@
+{
+  "repositoryId": "logFeaturedPromotion_v1",
+  "widgetType": "logFeaturedPromotion",
+  "version": 1,
+  "displayName": "Logicalis Featured Promotion",
+  "global": false,
+  "i18nresources": "logFeaturedPromotion",
+  "source": 101,
+  "javascript": "logFeaturedPromotion"
+}

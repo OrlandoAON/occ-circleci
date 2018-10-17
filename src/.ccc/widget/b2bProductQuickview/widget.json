@@ -1,0 +1,10 @@
+{
+  "repositoryId": "b2bProductQuickview_v1",
+  "widgetType": "b2bProductQuickview",
+  "version": 1,
+  "displayName": "b2bProductQuickview",
+  "global": false,
+  "i18nresources": "b2bProductQuickview",
+  "source": 101,
+  "javascript": "b2bProductQuickview"
+}

@@ -1,0 +1,10 @@
+{
+  "repositoryId": "B2CProductDetails_v1",
+  "widgetType": "B2CProductDetails",
+  "version": 1,
+  "displayName": "B2C Product Details",
+  "global": false,
+  "i18nresources": "productdetails",
+  "source": 101,
+  "javascript": "b2c-product-details"
+}

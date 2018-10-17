@@ -1,0 +1,10 @@
+{
+  "repositoryId": "B2COrderDetails_v1",
+  "widgetType": "B2COrderDetails",
+  "version": 1,
+  "displayName": "B2C Order Details",
+  "global": false,
+  "i18nresources": "orderdetails",
+  "source": 101,
+  "javascript": "b2c-order-details"
+}

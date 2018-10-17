@@ -1,0 +1,10 @@
+{
+  "repositoryId": "oeNoSearchResultsB2B_v1",
+  "widgetType": "oeNoSearchResultsB2B",
+  "version": 1,
+  "displayName": "oeNoSearchResultsB2B",
+  "global": false,
+  "i18nresources": "oeNoSearchResultsB2B",
+  "source": 101,
+  "javascript": "oeNoSearchResultsB2B"
+}
